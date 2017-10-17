@@ -1,12 +1,17 @@
 package com.guilherme.antonio.listenersms
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.toast
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +23,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         configSmsReceiver()
+        getPermission()
+
+
+    }
+
+    private fun getPermission() {
+
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_SMS) != PackageManager.PERMISSION_GRANTED) {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_SMS)) {
+
+            } else {
+                ActivityCompat.requestPermissions(this, Array(1, { Manifest.permission.READ_SMS }), 0)
+            }
+        }
+
     }
 
 

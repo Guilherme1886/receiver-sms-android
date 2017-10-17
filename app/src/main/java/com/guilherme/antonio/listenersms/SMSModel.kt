@@ -5,3 +5,4 @@ package com.guilherme.antonio.listenersms
  */
 
 data class SMSModel(var numero: String?, var mensagem: String?)
+

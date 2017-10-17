@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/listenersms.iml" filepath="$PROJECT_DIR$/listenersms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/receiver-sms-android.iml" filepath="$PROJECT_DIR$/receiver-sms-android.iml" />
     </modules>
   </component>
 </project>
